@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="muneco.svg">
+
+    </head>
+    
+    <body>
+        <!-- LOGO ALURA --> 
+        <header class="logoBox">
+            <div class="logo">
+                <object data="logo.svg" type="image/svg+xml"></object>
+            </div>
+        </header>
+            
+        <br>
+ 
+        <!-- ENTRADA DE TEXTOS --> 
+
+        <main>
+            <section class="encriptadorInput container">
+
+                <textarea id="mensaje" cols="70" rows="10" class="textoTA" required placeholder="Inserte su texto aqui..." onchange="generarTextos()"></textarea>
+        
+                <p class="advertencia">&#128712;Solo letras minusculas y sin acentos</p>
+        
+                <div>
+                    <input type="submit" value="Encriptar" class="encriptarBoton" id="Encriptar" onclick="encriptar()">
+        
+                    <input type="submit" value="Desencriptar" class="encriptarBoton" id="Desencriptar" onclick="desencriptar()">
+                </div>
+
+            </section>
+        
+            <br>
+
+            <!-- SALIDA DE TEXTOS --> 
+
+            <section class="encriptadorOutput container">
+        
+                <div>
+                    
+
+                    <textarea class="textoFinal" id="conTexto" cols="70" rows="10" placeholder="Texto encriptado:" readonly></textarea>
+        
+                    <div class="textoFinal" id="SinTexto" cols="70" rows="10" placeholder="Nada por aqui aun..." contenteditable="true" readonly>
+
+                        <img src="muneco.svg" alt="" class="imgMuneco">
+
+                    </div>
+                    
+                    <div class="textosNoFound">
+                        <p id="principalText">Ningun mensaje fue encontrado</p>
+                        <p id="secondaryText">Ingresa el texto que deseas encriptar o desencriptar</p>
+                    </div>
+                </div>
+        
+                <br>
+        
+                <div>
+                    <input type="submit" value="Copiar Texto" class="encriptarBoton" id="botonCopiar" onclick="copiar()">
+                </div>
+            </section>
+            
+        </main>
+
+        <!-- FOOTER --> 
+
+        <footer>
+            <ul class="futer">
+                <li class="logofoot">04</li>
+                <li class="logofoot2" style="font-size: 15px;">&copy; Copyright Tessera04 - 2022</li>
+                <li id="resetPage"><a href="index.html">&#10226;</a></li>
+            </ul>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
